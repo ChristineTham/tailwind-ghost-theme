@@ -1,6 +1,6 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A custom theme for ghost",
+    "name": "tailwind-ghost-theme",
+    "description": "Ghost Theme based on free TailwindUI components",
     "demo": "https://starter.ghost.io",
     "version": "1.0.0",
     "engines": {
@@ -21,9 +21,9 @@
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Christine Tham",
+        "email": "chris.tham@hellotham.com",
+        "url": "https://hellotham.com"
     },
     "gpm": {
         "type": "theme",
@@ -44,9 +44,9 @@
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
-        "autoprefixer": "9.8.3",
+        "autoprefixer": "9.8.6",
         "cssnano": "4.1.10",
-        "gscan": "3.5.4",
+        "gscan": "3.5.5",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "8.0.0",

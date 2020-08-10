@@ -1,0 +1,105 @@
+<nav class="bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+            <a href="{{@site.url}}">
+              {{#if @site.logo}}
+                  <img class="h-8 w-8" src="{{@site.logo}}" alt="{{@site.title}}" />
+              {{else}}
+                  {{@site.title}}
+              {{/if}}
+          </a>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline">
+            <!-- Loop through the navigation items -->
+            {{#foreach navigation}}
+              {{#if current}}
+                <a href="{{url absolute="true"}}" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
+              {{else}}
+                <a href="{{url absolute="true"}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
+              {{/if}}
+            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+            {{/foreach}}
+            <!-- End the loop -->
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <div class="ml-4 flex items-center md:ml-6">
+          {{#if @site.facebook}}
+          <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener" class="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/facebook"}}</a>
+          {{/if}}
+          {{#if @site.twitter}}
+          <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener" class="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/twitter"}}</a>
+          {{/if}}
+          <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener" class="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/rss"}}</a>
+        </div>
+      </div>
+      <div class="-mr-2 flex md:hidden">
+        <!-- Mobile menu button -->
+        <button onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white">
+          <!-- Menu open: "hidden", Menu closed: "block" -->
+          <svg id="menuclosed" class="block h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Menu open: "block", Menu closed: "hidden" -->
+          <svg id="menuopen" class="hidden h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    Mobile menu, toggle classes based on menu state.
+
+    Open: "block", closed: "hidden"
+  -->
+  <div id="mobilemenu" class="hidden md:hidden">
+    <div class="px-2 pt-2 pb-3 sm:px-3">
+      <!-- Loop through the navigation items -->
+      {{#foreach navigation}}
+        {{#if current}}
+          <a href="{{url absolute="true"}}" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
+        {{else}}
+          <a href="{{url absolute="true"}}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
+        {{/if}}
+      <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+      {{/foreach}}
+      <!-- End the loop -->
+    </div>
+    <div class="pt-4 pb-3 border-t border-gray-700">
+      <div class="flex items-center px-5">
+        {{#if @site.facebook}}
+          <div class="flex-shrink-0">
+            <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener" class="h-10 w-10 rounded-full" >{{> "icons/facebook"}}</a>
+          </div>
+        {{/if}}
+        {{#if @site.twitter}}
+          <div class="flex-shrink-0">
+            <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener" class="h-10 w-10 rounded-full" >{{> "icons/twitter"}}</a>
+          </div>
+        {{/if}}
+        <div class="flex-shrink-0">
+          <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener" class="h-10 w-10 rounded-full" >{{> "icons/rss"}}</a>
+        </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+function toggleMenu() {
+  var menuclosed = document.getElementById("menuclosed");
+  menuclosed.classList.toggle("block");
+  menuclosed.classList.toggle("hidden");
+  var menuopen = document.getElementById("menuopen");
+  menuopen.classList.toggle("block");
+  menuopen.classList.toggle("hidden");
+  var mobilemenu = document.getElementById("mobilemenu");
+  mobilemenu.classList.toggle("block");
+  mobilemenu.classList.toggle("hidden");
+}
+</script>
