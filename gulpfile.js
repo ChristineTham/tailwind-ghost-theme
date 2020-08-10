@@ -1,4 +1,4 @@
-const {series, watch, src, dest, parallel} = require('gulp');
+const { series, watch, src, dest, parallel } = require('gulp');
 const pump = require('pump');
 
 // gulp plugins and utils
@@ -20,7 +20,7 @@ function serve(done) {
 }
 
 const handleError = (done) => {
-    return function (err) {
+    return function(err) {
         if (err) {
             beeper();
         }
@@ -39,23 +39,24 @@ function css(done) {
     var processors = [
         easyimport,
         colorFunction(),
+        require('tailwindcss'),
         autoprefixer(),
         cssnano()
     ];
 
     pump([
-        src('assets/css/*.css', {sourcemaps: true}),
+        src('assets/css/*.css', { sourcemaps: true }),
         postcss(processors),
-        dest('assets/built/', {sourcemaps: '.'}),
+        dest('assets/built/', { sourcemaps: '.' }),
         livereload()
     ], handleError(done));
 }
 
 function js(done) {
     pump([
-        src('assets/js/*.js', {sourcemaps: true}),
+        src('assets/js/*.js', { sourcemaps: true }),
         uglify(),
-        dest('assets/built/', {sourcemaps: '.'}),
+        dest('assets/built/', { sourcemaps: '.' }),
         livereload()
     ], handleError(done));
 }

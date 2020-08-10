@@ -4,8 +4,8 @@
       <div class="flex items-center">
         <div class="flex-shrink-0">
             <a href="{{@site.url}}">
-              {{#if @site.logo}}
-                  <img class="h-8 w-8" src="{{@site.logo}}" alt="{{@site.title}}" />
+              {{#if @site.icon}}
+                  <img class="h-8 w-8" src="{{@site.icon}}" alt="{{@site.title}}" />
               {{else}}
                   {{@site.title}}
               {{/if}}
@@ -20,7 +20,6 @@
               {{else}}
                 <a href="{{url absolute="true"}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
               {{/if}}
-            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
             {{/foreach}}
             <!-- End the loop -->
           </div>
