@@ -1,0 +1,37 @@
+{{!--
+Re-usable card for linking to posts
+--}}
+      <div class="px-4 py-6 sm:px-0">
+        <div class="border-2 border-gray-300 rounded-lg">
+<article class="{{post_class}}">
+    {{#if feature_image}}
+        <div class="shadow bg-white">
+            <div class=" bg-size bg-cover bg-center"
+                style="background-image: url({{img_url feature_image size="l"}})">
+                <div class="p-4 h-32 flex items-end text-gray-400">
+                    <h3 class="mb-2">{{title}}</h3>
+                </div>
+            </div>
+            <div class="p-4">
+                <p class="text-sm text-gray-600"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</p>
+                <p class="text-grey-600 text-sm">{{excerpt}}</p>
+                <div class="mt-4">
+                    <a href="{{url}}" class="no-underline mr-4 text-blue-500 hover:text-blue-400">Read more</a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        <div class="shadow p-4 bg-white">
+            <div class="text-left">
+                <h3 class="mb-2 text-gray-700">{{title}}</h3>
+                <p class="text-sm text-gray-600"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</p>
+                <p class="text-grey-600 text-sm">{{excerpt}}</p>
+            </div>            ​
+            <div class="mt-4">
+                <a href="{{url}}" class="no-underline mr-4 text-blue-500 hover:text-blue-400">Read more</a>
+            </div>
+        </div>        
+    {{/if}}
+</article>
+        </div>
+      </div>

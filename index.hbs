@@ -1,9 +1,7 @@
 {{!< default}}
 
-{{#foreach posts visibility="all"}}
-      <div class="px-4 py-6 sm:px-0">
-        <div class="border-4 border-dashed border-gray-200 rounded-lg">
-            {{> "card"}} {{!-- partials/card.hbs --}}
-        </div>
-      </div>
-{{/foreach}}
+<div class="flex flex-wrap mb-4">
+  {{#foreach posts visibility="all"}}
+    {{> "card"}} {{!-- partials/card.hbs --}}
+  {{/foreach}}
+</div>
