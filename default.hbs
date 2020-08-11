@@ -13,24 +13,22 @@
     {{!-- Outputs important meta data and settings, should always be in <head> --}}
 
 </head>
-<body class="{{body_class}}">
-<div class="bg-gray-200">
+<body class="{{body_class}} bg-gray-100">
+<div>
   {{navigation}}
 
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold leading-tight text-gray-900">
-          {{#is "index"}}
-            {{@site.title}}
-          {{/is}}
-          {{#is "post, page"}}
-            {{title}}
-          {{/is}}
-      </h1>
-    </div>
-  </header>
+  {{#is "index"}}
+    <header class="bg-white shadow">
+      <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold leading-tight text-gray-900">
+              {{@site.title}}
+        </h1>
+      </div>
+    </header>
+  {{/is}}
+
   <main>
-    <div class="bg-gray-200 max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
 
         {{{body}}}
         {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}

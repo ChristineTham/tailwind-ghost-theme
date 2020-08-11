@@ -1,7 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-    purge: [],
+    purge: {
+        enabled: false,
+        content: ['./**/*.hbs'],
+    },
     theme: {
         extend: {
             fontFamily: {
@@ -12,5 +15,6 @@ module.exports = {
     variants: {},
     plugins: [
         require('@tailwindcss/ui'),
+        require('@tailwindcss/typography'),
     ],
 }

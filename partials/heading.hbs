@@ -1,0 +1,54 @@
+<header class="mb-4 bg-white">
+    <div class="bg-white lg:flex lg:items-center lg:justify-between">
+        <div class="flex-1 min-w-0">
+            <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:leading-9 sm:truncate">
+            {{title}}
+            </h2>
+            <div class="flex flex-col mt-1 sm:mt-0 sm:flex-row sm:flex-wrap">
+                {{#if authors}}
+                    {{#foreach authors}}
+                        <div class="flex items-center mt-2 leading-5 sm:mr-6">
+                            <div class="user-logo">
+                                <img class="object-cover w-12 h-12 mx-4 rounded-full shadow" src="{{profile_image}}" alt="{{name}}">
+                            </div>
+                            <h2 class="text-sm tracking-tighter text-gray-500">
+                                <a href="{{url}}">{{name}}</a>
+                            </h2>
+                        </div>                
+                    {{/foreach}}
+                {{/if}}
+                <div class="flex items-center mt-2 text-sm leading-5 text-gray-500 sm:mr-6">
+                    <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                    </svg>
+                    {{reading_time}}
+                </div>
+                <div class="flex items-center mt-2 text-sm leading-5 text-gray-500">
+                    <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                    </svg>
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    {{#if custom_excerpt}}
+        <div class="flex-1 p-4 my-4 bg-gray-100 rounded-lg">
+            <p class="text-lg italic font-thin text-center">{{custom_excerpt}}</p>
+        </div>        
+    {{/if}}
+
+    {{#if feature_image}}
+    <img class="rounded-lg"
+        srcset="{{img_url feature_image size="s"}} 300w,
+                {{img_url feature_image size="m"}} 600w,
+                {{img_url feature_image size="l"}} 1000w,
+                {{img_url feature_image size="xl"}} 2000w"
+        sizes="(max-width: 1000px) 1000px, 2000px"
+        loading="lazy"
+        src="{{img_url feature_image size="xl"}}"
+        alt="{{title}}"
+    />
+    {{/if}}
+</header>
