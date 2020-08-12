@@ -9,9 +9,11 @@
                     {{#if authors}}
                         {{#foreach authors}}
                             <div class="flex items-center mt-2 leading-5 sm:mr-6">
-                                <div class="user-logo">
-                                    <img class="object-cover w-12 h-12 mx-4 rounded-full shadow" src="{{profile_image}}" alt="{{name}}">
-                                </div>
+                                {{#if cover_image}}
+                                    <div class="user-logo">
+                                        <img class="object-cover w-12 h-12 mx-4 rounded-full shadow" src="{{profile_image}}" alt="{{name}}">
+                                    </div>
+                                {{/if}}
                                 <h2 class="text-sm tracking-tighter text-gray-500">
                                     <a href="{{url}}">{{name}}</a>
                                 </h2>

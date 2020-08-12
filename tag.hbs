@@ -1,35 +1,9 @@
 {{!< default}}
 
-<div class="gh-page">
-    <div class="gh-container">
+<div class="flex flex-wrap justify-center items-top">
+{{#foreach posts visibility="all"}}
 
-        {{#tag}}
-        <header class="gh-page-head">
+    {{> "card"}} {{!-- partials/card.hbs --}}
 
-            <h1>{{name}}</h1>
-
-            <p>
-                {{#if description}}
-                    {{description}}
-                {{else}}
-                    A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
-                {{/if}}
-            </p>
-
-            {{#if feature_image}}
-                <img class="gh-page-image" src="{{feature_image}}" alt="{{name}}" />
-            {{/if}}
-
-        </header>
-        {{/tag}}
-
-        <div class="gh-postfeed">
-        {{#foreach posts visibility="all"}}
-
-            {{> "card"}} {{!-- partials/card.hbs --}}
-
-        {{/foreach}}
-        </div>
-
-    </div>
+{{/foreach}}
 </div>
