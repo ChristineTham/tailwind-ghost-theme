@@ -1,7 +1,7 @@
 {
     "name": "tailwind-ghost-theme",
     "description": "Ghost Theme based on TailwindCSS framework",
-    "demo": "https://starter.ghost.io",
+    "demo": "https://tailwind.hellotham.com",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=3.0.0",
@@ -39,10 +39,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/ChristineTham/tailwind-ghost-theme.git"
     },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
-    "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
+    "bugs": "https://github.com/ChristineTham/tailwind-ghost-theme/issues",
+    "contributors": "https://github.com/ChristineTham/tailwind-ghost-theme/graphs/contributors",
     "devDependencies": {
         "autoprefixer": "9.8.6",
         "cssnano": "4.1.10",

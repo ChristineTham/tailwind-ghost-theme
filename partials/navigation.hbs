@@ -1,33 +1,33 @@
 <nav class="bg-gray-800">
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+  <div class="px-2 sm:px-6 lg:px-8">
     <div class="relative flex items-center justify-between h-16">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
-        <button onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
+        <button onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white" aria-label="Main menu" aria-expanded="false">
           <!-- Icon when menu is closed. -->
           <!-- Menu open: "hidden", Menu closed: "block" -->
-          <svg id="menuclosed" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg id="menuclosed" class="block w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
           <!-- Icon when menu is open. -->
           <!-- Menu open: "block", Menu closed: "hidden" -->
-          <svg id="menuopen" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg id="menuopen" class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
-      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+      <div class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
         <div class="flex-shrink-0">
             <a class="block lg:hidden" href="{{@site.url}}">
               {{#if @site.icon}}
-                  <img class="h-8 w-auto" src="{{@site.icon}}" alt="{{@site.title}}" />
+                  <img class="w-auto h-8" src="{{@site.icon}}" alt="{{@site.title}}" />
               {{else}}
                   {{@site.title}}
               {{/if}}
             </a>
             <a class="hidden lg:block" href="{{@site.url}}">
               {{#if @site.logo}}
-                  <img class="h-8 w-auto" src="{{@site.logo}}" alt="{{@site.title}}" />
+                  <img class="w-auto h-8" src="{{@site.logo}}" alt="{{@site.title}}" />
               {{else}}
                   {{@site.title}}
               {{/if}}
@@ -38,9 +38,9 @@
             <!-- Loop through the navigation items -->
             {{#foreach navigation}}
               {{#if current}}
-                <a href="{{url absolute="true"}}" class="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">{{label}}</a>
+                <a href="{{url absolute="true"}}" class="px-3 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-gray-900 rounded-md focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
               {{else}}
-                <a href="{{url absolute="true"}}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">{{label}}</a>
+                <a href="{{url absolute="true"}}" class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
               {{/if}}
             {{/foreach}}
             <!-- End the loop -->
@@ -49,12 +49,12 @@
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
         {{#if @site.facebook}}
-        <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener" class="h-10 w-10 p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out" >{{> "icons/facebook"}}</a>
+        <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener" class="w-10 h-10 p-1 text-gray-400 transition duration-150 ease-in-out border-2 border-transparent rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/facebook"}}</a>
         {{/if}}
         {{#if @site.twitter}}
-        <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener" class="h-10 w-10 p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out" >{{> "icons/twitter"}}</a>
+        <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener" class="w-10 h-10 p-1 text-gray-400 transition duration-150 ease-in-out border-2 border-transparent rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/twitter"}}</a>
         {{/if}}
-        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener" class="h-10 w-10 p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out" >{{> "icons/rss"}}</a>
+        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener" class="w-10 h-10 p-1 text-gray-400 transition duration-150 ease-in-out border-2 border-transparent rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/rss"}}</a>
       </div>
     </div>
   </div>
@@ -69,9 +69,9 @@
       <!-- Loop through the navigation items -->
       {{#foreach navigation}}
         {{#if current}}
-          <a href="{{url absolute="true"}}" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">{{label}}</a>
+          <a href="{{url absolute="true"}}" class="block px-3 py-2 text-base font-medium text-white transition duration-150 ease-in-out bg-gray-900 rounded-md focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
         {{else}}
-          <a href="{{url absolute="true"}}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">{{label}}</a>
+          <a href="{{url absolute="true"}}" class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
         {{/if}}
       {{/foreach}}
       <!-- End the loop -->

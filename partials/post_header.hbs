@@ -5,6 +5,7 @@
                 <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:leading-9 sm:truncate">
                 {{title}}
                 </h2>
+                {{#is "post"}}
                 <div class="flex flex-col mt-1 sm:mt-0 sm:flex-row sm:flex-wrap">
                     {{#if authors}}
                         {{#foreach authors}}
@@ -33,6 +34,7 @@
                         <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
                     </div>
                 </div>
+                {{/is}}
             </div>
         </div>  
 

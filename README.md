@@ -1,6 +1,13 @@
-# Ghost Starter Theme
+# Tailwind Ghost Theme
 
-A starter framework for Ghost themes! Fork this repository and start your development here with all the main things you need to develop a custom Ghost theme.
+A Ghost Theme based on [TryGhost/Starter](https://github.com/TryGhost/Starter.git) but using [Tailwind CSS](https://tailwindcss.com/) instead of the default CSS styles.
+
+Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles. It is relatively easy to customise this theme just by changing the utility classes.
+
+This theme preserves the CSS framework and styles used to render posts and pages (based on the default [Casper](https://github.com/TryGhost/Casper.git) theme 
+bundled with Ghost), so blog pages will be rendered exactly as in Casper for maximum compatibility.
+
+The theme uses the TailwindUI component framework as well as the typography plugin.
 
 &nbsp;
 
@@ -51,6 +58,7 @@ yarn zip
 
 # PostCSS Features Used
 
+- TailwindCSS
 - Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
 - [Color Mod](https://github.com/jonathantneal/postcss-color-mod-function)
 
@@ -58,4 +66,4 @@ yarn zip
 
 # Copyright & License
 
-Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2020 Hello Tham Pty Ltd - Released under the [MIT license](LICENSE).
