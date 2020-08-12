@@ -1,5 +1,7 @@
 # Tailwind Ghost Theme
 
+![screenshot](https://github.com/ChristineTham/tailwind-ghost-theme/raw/master/assets/screenshot-desktop.jpg)
+
 A Ghost Theme based on [TryGhost/Starter](https://github.com/TryGhost/Starter.git) but using [Tailwind CSS](https://tailwindcss.com/) instead of the default CSS styles.
 
 Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles. It is relatively easy to customise this theme just by changing the utility classes.
