@@ -1,11 +1,11 @@
 {{!< default}}
 
 {{#post}}
-<article class="gh-article {{post_class}}">
-    {{> heading}}
-
-    <div class="prose lg:prose-xl gh-content max-w-none">
-        {{content}}
-    </div>
+<article class="inner post-full {{post_class}}">
+    <section class="post-full-content">
+        <div class="prose post-content">
+            {{content}}
+        </div>
+    </section>
 </article>
 {{/post}}

@@ -1,6 +1,6 @@
 {
     "name": "tailwind-ghost-theme",
-    "description": "Ghost Theme based on free TailwindUI components",
+    "description": "Ghost Theme based on TailwindCSS framework",
     "demo": "https://starter.ghost.io",
     "version": "1.0.0",
     "engines": {

@@ -27,8 +27,14 @@
     </header>
   {{/is}}
 
+  {{#is "post, page"}}
+    {{#post}}
+      {{> heading}}
+    {{/post}}
+  {{/is}}
+  
   <main>
-    <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div>
 
         {{{body}}}
         {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}

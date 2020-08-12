@@ -2,13 +2,13 @@
 
 {{#post}}
 
-<article class="{{post_class}}">
+<article class="inner post-full {{post_class}}">
 
-    {{> heading}}
-
-    <div class="prose lg:prose-xl gh-content max-w-none">
-        {{content}}
-    </div>
+    <section class="post-full-content">
+        <div class="prose post-content">
+            {{content}}
+        </div>
+    </section>
 
 </article>
 
