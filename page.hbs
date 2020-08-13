@@ -1,11 +1,19 @@
 {{!< default}}
 
 {{#post}}
-<article class="inner post-full {{post_class}}">
-    <section class="post-full-content">
-        <div class="prose post-content">
-            {{content}}
-        </div>
-    </section>
-</article>
+
+{{> post_header}}
+
+<main>
+    
+    <article class="inner post-full {{post_class}}">
+        <section class="post-full-content">
+            <div class="prose post-content">
+                {{content}}
+            </div>
+        </section>
+    </article>
+
+</main>
+
 {{/post}}

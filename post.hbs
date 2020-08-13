@@ -2,39 +2,46 @@
 
 {{#post}}
 
-<article class="inner post-full {{post_class}}">
+{{> post_header}}
 
-    <section class="post-full-content">
-        <div class="prose post-content">
-            {{content}}
-        </div>
-    </section>
+<main>
+    
+    <article class="inner post-full {{post_class}}">
 
-</article>
-
-<aside class="flex flex-row justify-between mt-10">
-    {{#next_post}}
-        <a href="{{url}}" class="px-4 py-3 text-gray-500 bg-gray-200 rounded-lg shadow-md">
-            <div class="flex">
-                <div class="w-5 h-5 py-1 mr-4 text-gray-400 fill-current">{{> "icons/arrow-left"}}</div>
-                <div>
-                    <p class="text-sm">Previous:</p>
-                    <p class="font-bold">{{title}}</p>
-                </div>
+        <section class="post-full-content">
+            <div class="prose post-content">
+                {{content}}
             </div>
-        </a>                   
-    {{/next_post}}
-    {{#prev_post}}
-        <a href="{{url}}" class="px-4 py-3 text-gray-500 bg-gray-200 rounded-lg shadow-md">
-            <div class="flex">
-                <div class="mr-4">
-                    <p class="text-sm">Next:</p>
-                    <p class="font-bold">{{title}}</p>
+        </section>
+
+    </article>
+
+    <aside class="flex flex-row justify-between mt-10">
+        {{#next_post}}
+            <a href="{{url}}" class="px-4 py-3 text-gray-500 bg-gray-200 rounded-lg shadow-md">
+                <div class="flex">
+                    <div class="w-5 h-5 py-1 mr-4 text-gray-400 fill-current">{{> "icons/arrow-left"}}</div>
+                    <div>
+                        <p class="text-sm">Previous:</p>
+                        <p class="font-bold">{{title}}</p>
+                    </div>
                 </div>
-                <div class="w-5 h-5 py-1 text-gray-400 fill-current">{{> "icons/arrow-right"}}</div>
-            </div>
-        </a>                   
-    {{/prev_post}}
-</aside>
+            </a>                   
+        {{/next_post}}
+        {{#prev_post}}
+            <a href="{{url}}" class="px-4 py-3 text-gray-500 bg-gray-200 rounded-lg shadow-md">
+                <div class="flex">
+                    <div class="mr-4">
+                        <p class="text-sm">Next:</p>
+                        <p class="font-bold">{{title}}</p>
+                    </div>
+                    <div class="w-5 h-5 py-1 text-gray-400 fill-current">{{> "icons/arrow-right"}}</div>
+                </div>
+            </a>                   
+        {{/prev_post}}
+    </aside>
+    
+</main>
+
 
 {{/post}}

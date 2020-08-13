@@ -15,38 +15,11 @@
 </head>
 <body class="{{body_class}} bg-gray-100">
 <div>
+  {{!-- The header and navigation bar at the very top of the screen --}}
   {{navigation}}
 
-  {{#is "index"}}
-    {{> header}}
-  {{/is}}
-
-  {{#is "post, page"}}
-    {{#post}}
-      {{> post_header}}
-    {{/post}}
-  {{/is}}
-  
-  {{#is "author"}}
-    {{#primary_author}}
-      {{> author_header}}
-    {{/primary_author}}
-  {{/is}}
-
-  {{#is "tag"}}
-    {{#tag}}
-      {{> tag_header}}
-    {{/tag}}
-  {{/is}}
-
-  <main>
-    <div>
-
-        {{{body}}}
-        {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
-
-    </div>
-  </main>
+  {{{body}}}
+  {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
   
   {{!-- The footer at the very bottom of the screen --}}
   <footer class="bg-gray-800">
@@ -79,7 +52,7 @@ images.forEach(function (image) {
     container.style.flex = ratio + ' 1 0%';
 });
 $(document).ready(function () {
-    var $postContent = $(".gh-content");
+    var $postContent = $(".post-full");
     $postContent.fitVids();
 });
 </script>
