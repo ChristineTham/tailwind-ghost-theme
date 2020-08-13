@@ -13,9 +13,3 @@
     --brown: #a3821a;
     --darkmode: color-mod(var(--darkgrey) l(+2%));
 }
-
-.inner {
-    margin: 0 auto;
-    max-width: 1040px;
-    width: 100%;
-}

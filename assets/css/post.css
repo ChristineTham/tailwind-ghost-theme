@@ -1,3 +1,10 @@
+.inner {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 100%;
+}
+
+
 /* Single Post (from casper default theme)
 /* ---------------------------------------------------------- */
 

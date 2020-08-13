@@ -1,7 +1,7 @@
 {
     "name": "tailwind-ghost-theme",
     "description": "Ghost Theme based on TailwindCSS framework",
-    "demo": "https://tailwind.hellotham.com",
+    "demo": "https://tailwind-ghost.hellotham.com",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=3.0.0",

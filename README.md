@@ -11,6 +11,8 @@ bundled with Ghost), so blog pages will be rendered exactly as in Casper for max
 
 The theme uses the TailwindUI component framework as well as the typography plugin.
 
+[Demo](https://tailwind-ghost.hellotham.com)
+
 &nbsp;
 
 # First time using a Ghost theme?

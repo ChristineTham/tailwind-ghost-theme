@@ -1,8 +1,4 @@
-/*
-@import "ghost/errors.css";
-*/
-
-@import "shim.css";
+@import "colors.css";
 @import "post.css";
 @import "koenig.css";
 @tailwind base;
