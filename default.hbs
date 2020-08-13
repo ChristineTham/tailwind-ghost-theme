@@ -47,7 +47,17 @@
 
     </div>
   </main>
-
+  
+  {{!-- The footer at the very bottom of the screen --}}
+  <footer class="bg-gray-800">
+      <div class="px-2 sm:px-6 lg:px-8">
+          <nav class="flex items-center justify-center">
+              <section class="px-3 py-2 text-sm font-medium leading-5 text-gray-200"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
+              <section class="px-3 py-2 text-sm font-medium leading-5 text-gray-400">Published by <a class="text-gray-200" href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></section>
+          </nav>
+      </div>
+  </footer>
+        
 <script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
 
 {{#if pagination.pages}}
