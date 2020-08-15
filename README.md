@@ -13,6 +13,8 @@ The theme uses the TailwindUI component framework as well as the typography plug
 
 [Demo](https://tailwind-ghost.hellotham.com)
 
+[Download theme zip file](https://github.com/ChristineTham/tailwind-ghost-theme/releases/download/1.0.1/tailwind-ghost-theme.zip)
+
 &nbsp;
 
 # First time using a Ghost theme?
