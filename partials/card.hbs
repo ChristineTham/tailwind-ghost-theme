@@ -34,12 +34,12 @@ Re-usable card for linking to posts
                 {{#foreach authors}}
                     <div class="flex items-center my-3 -ml-3 author">
                         <div class="user-logo">
-                            <img class="object-cover w-12 h-12 mx-4 rounded-full shadow" src="{{profile_image}}" alt="{{name}}">
+                            <img class="object-cover w-12 h-12 mx-4 rounded-full shadow" src="{{img_url profile_image size="xs"}}" alt="{{name}}">
                         </div>
                         <h2 class="text-sm tracking-tighter text-gray-900">
                             <a href="{{url}}">By {{name}}</a> <span class="text-gray-600"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time></span>
                         </h2>
-                    </div>                
+                    </div>
                 {{/foreach}}
             {{/if}}
         </div>

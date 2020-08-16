@@ -1,4 +1,4 @@
-<nav class="bg-gray-800">
+<nav class="bg-transparent">
   <div class="px-2 sm:px-6 lg:px-8">
     <div class="relative flex items-center justify-between h-16">
       <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
@@ -20,14 +20,14 @@
         <div class="flex-shrink-0 ml-10 md:ml-0">
             <a class="block lg:hidden text-white" href="{{@site.url}}">
               {{#if @site.icon}}
-                  <img class="w-auto h-8" src="{{@site.icon}}" alt="{{@site.title}}" />
+                  <img class="w-auto h-8" src="{{img_url @site.icon size="xs"}}" alt="{{@site.title}}" />
               {{else}}
                   {{@site.title}}
               {{/if}}
             </a>
             <a class="hidden lg:block text-white" href="{{@site.url}}">
               {{#if @site.logo}}
-                  <img class="w-auto h-8" src="{{@site.logo}}" alt="{{@site.title}}" />
+                  <img class="w-auto h-8" src="{{img_url @site.logo size="xs"}}" alt="{{@site.title}}" />
               {{else}}
                   {{@site.title}}
               {{/if}}
@@ -38,7 +38,7 @@
             <!-- Loop through the navigation items -->
             {{#foreach navigation}}
               {{#if current}}
-                <a href="{{url absolute="true"}}" class="px-3 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out bg-gray-900 rounded-md focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
+                <a href="{{url absolute="true"}}" class="px-3 py-2 text-sm font-bold leading-5 text-white transition duration-150 ease-in-out rounded-md focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
               {{else}}
                 <a href="{{url absolute="true"}}" class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 transition duration-150 ease-in-out rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">{{label}}</a>
               {{/if}}
@@ -46,15 +46,26 @@
             <!-- End the loop -->
           </div>
         </div>
+        <div class="block md:hidden md:ml-6">
+            <div class="flex">
+                <!-- Loop through the navigation items -->
+                {{#foreach navigation}}
+                {{#if current}}
+                <p class="px-3 py-2 ml-4 text-sm font-medium leading-5 text-gray-300 rounded-md">{{label}}</a>
+                    {{/if}}
+                    {{/foreach}}
+                    <!-- End the loop -->
+            </div>
+        </div>
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
         {{#if @site.facebook}}
-        <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener" class="w-10 h-10 p-1 text-gray-400 transition duration-150 ease-in-out border-2 border-transparent rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/facebook"}}</a>
+        <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener" class="fill-current w-10 h-10 p-1 text-gray-400 transition duration-150 ease-in-out border-2 border-transparent rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/facebook"}}</a>
         {{/if}}
         {{#if @site.twitter}}
-        <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener" class="w-10 h-10 p-1 text-gray-400 transition duration-150 ease-in-out border-2 border-transparent rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/twitter"}}</a>
+        <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener" class="fill-current w-10 h-10 p-1 text-gray-400 transition duration-150 ease-in-out border-2 border-transparent rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/twitter"}}</a>
         {{/if}}
-        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener" class="w-10 h-10 p-1 text-gray-400 transition duration-150 ease-in-out border-2 border-transparent rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/rss"}}</a>
+        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener" class="fill-current w-10 h-10 p-1 text-gray-400 transition duration-150 ease-in-out border-2 border-transparent rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" >{{> "icons/rss"}}</a>
       </div>
     </div>
   </div>

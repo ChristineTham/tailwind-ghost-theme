@@ -15,12 +15,10 @@
 </head>
 <body class="{{body_class}} bg-gray-100">
 <div>
-  {{!-- The header and navigation bar at the very top of the screen --}}
-  {{navigation}}
 
   {{{body}}}
   {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
-  
+
   {{!-- The footer at the very bottom of the screen --}}
   <footer class="bg-gray-800">
       <div class="px-2 sm:px-6 lg:px-8">
@@ -30,7 +28,7 @@
           </nav>
       </div>
   </footer>
-        
+
 <script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
 
 {{#if pagination.pages}}
